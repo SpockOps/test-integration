@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: beta-k
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Simulate deploy
+        run: |
+          echo "Deploying to beta-k"
+          echo "SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}"
+          sleep 5
+          echo "Deploy complete"
