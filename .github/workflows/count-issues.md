@@ -8,7 +8,7 @@ permissions:
   copilot-requests: write      # bill Copilot to the SpockOps org (Actions token), not a personal token
 engine:
   id: copilot
-  model: copilot/gpt-5-mini    # "copilot/" prefix: sent as written, no alias swap
+  model: copilot/gpt-5.4-mini  # "copilot/" prefix: sent as written, no alias swap
 max-ai-credits: 50             # per-run cap ($0.50)
 max-daily-ai-credits: 200
 tools:
