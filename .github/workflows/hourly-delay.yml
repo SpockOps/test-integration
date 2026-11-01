@@ -1,0 +1,15 @@
+name: Hourly Synthetic Delay
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  delay:
+    runs-on: blacksmith-2vcpu-ubuntu-2404
+    steps:
+      - name: Synthetic delay
+        run: sleep 20
+      - name: Done
+        run: echo "done"
